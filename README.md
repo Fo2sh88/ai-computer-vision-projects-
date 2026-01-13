@@ -1,10 +1,9 @@
 # Inlämningsuppgift 1.AI - Three Computer Vision Projects
 
-Complete implementation of three advanced computer vision projects for full marks (VG > 90%).
 
 ## Projects Overview
 
-### Project 1: Shape Sorting by Area (25 points)
+### Project 1: Shape Sorting by Area 
 **File:** `project1_shape_sorting.py`
 
 Detects shapes in images and sorts them by area in descending order.
@@ -41,7 +40,7 @@ Rank  Shape Name      Area (pixels)
 
 ---
 
-### Project 2: Image Classification (35 points total)
+### Project 2: Image Classification
 
 **File:** `project2_image_classification.py`
 
@@ -62,7 +61,7 @@ Detects objects in images and videos with >90% confidence and categorizes them i
 - Supports video processing with frame skipping for efficiency
 - Generates annotated output video
 
-**Part 2a: Image Classification (25 points)**
+**Part 2a: Image Classification
 
 ```python
 from project2_image_classification import ImageClassification
@@ -76,7 +75,7 @@ classifier.classify_image("image.jpg", confidence_threshold=0.9)
 classifier.print_summary()
 ```
 
-**Part 2b: Video Classification (10 points)**
+**Part 2b: Video Classification
 
 ```python
 # Process video
@@ -107,7 +106,7 @@ classified_objects/
 
 ---
 
-### Project 3: MyImageProcessor (40 points total)
+### Project 3: MyImageProcessor 
 
 **File:** `project3_my_image_processor.py`
 
@@ -115,7 +114,7 @@ Comprehensive image processing class with 8 methods for various image operations
 
 **Class Features:**
 
-#### a. Constructor `__init__(image_path)` - 5 points
+#### a. Constructor `__init__(image_path)` 
 - Reads image from file path
 - Validates file existence
 - Stores image in BGR format
@@ -125,7 +124,7 @@ Comprehensive image processing class with 8 methods for various image operations
 processor = MyImageProcessor("image.jpg")
 ```
 
-#### b. Method `bgr_2_rgb_convertor()` - 5 points
+#### b. Method `bgr_2_rgb_convertor()` 
 - Converts BGR to RGB color space
 - Displays RGB image using matplotlib
 - Returns numpy array of RGB image
@@ -134,7 +133,7 @@ processor = MyImageProcessor("image.jpg")
 rgb_array = processor.bgr_2_rgb_convertor()
 ```
 
-#### c. Method `bgr_2_gray_scale_convertor()` - 5 points
+#### c. Method `bgr_2_gray_scale_convertor()` 
 - Converts BGR to grayscale
 - Displays grayscale image
 - Returns numpy array of grayscale image
@@ -152,7 +151,7 @@ gray_array = processor.bgr_2_gray_scale_convertor()
 resized_array = processor._50_percent_resizer()
 ```
 
-#### e. Method `image_writer(output_image_path_and_name)` - 5 points
+#### e. Method `image_writer(output_image_path_and_name)` 
 - Saves image in RGB format
 - Takes string path with or without filename
 - Creates directories if needed
@@ -162,7 +161,7 @@ resized_array = processor._50_percent_resizer()
 success = processor.image_writer("output/processed.jpg")
 ```
 
-#### f. Method `frame_it(output_image_with_frame_path)` - 5 points
+#### f. Method `frame_it(output_image_with_frame_path)` 
 - Draws RED rectangle frame around image
 - Frame thickness: 20 pixels
 - Displays framed image
@@ -173,7 +172,7 @@ success = processor.image_writer("output/processed.jpg")
 framed_array = processor.frame_it("output/framed.jpg")
 ```
 
-#### g. Method `find_center(output_image_with_center)` - 5 points
+#### g. Method `find_center(output_image_with_center)` 
 - Draws BLUE point at image center
 - Adds text "image center" in good font size
 - Displays result
@@ -184,7 +183,7 @@ framed_array = processor.frame_it("output/framed.jpg")
 center_array = processor.find_center("output/center.jpg")
 ```
 
-#### h. Method `detect_faces()` - 10 points
+#### h. Method `detect_faces()`
 - Uses CascadeClassifier for face detection
 - Draws RED rectangles around detected faces
 - Returns tuple: (image_array, face_count)
@@ -244,39 +243,37 @@ inlämningsuppgift 1.AI/
 └── classified_objects/ (auto-created for Project 2)
 ```
 
-## Grading Criteria
-
-### Project 1: Shape Sorting (25 points)
+Project 1: Shape Sorting 
 - ✅ Correct shape identification
 - ✅ Area calculation accuracy
 - ✅ Proper descending sort
 - ✅ Formatted output list
 - ✅ Visualization capability
 
-### Project 2: Image Classification (35 points)
-**Part 2a (25 points):**
+Project 2: Image Classification 
+**Part 2a :
 - ✅ Object detection >90% confidence
 - ✅ 8 category classification
 - ✅ Individual image saving format (name_num.jpg)
 - ✅ Proper folder organization
 - ✅ Confidence filtering
 
-**Part 2b (10 points):**
+Part 2b :
 - ✅ Video input processing
 - ✅ Frame-by-frame processing
 - ✅ Detected objects saved
 - ✅ Optional annotated video output
 - ✅ Efficient frame skipping
 
-### Project 3: MyImageProcessor (40 points)
-- ✅ Constructor with file validation (5 pts)
-- ✅ BGR to RGB conversion & display (5 pts)
-- ✅ BGR to grayscale conversion & display (5 pts)
-- ✅ 50% resize with RGB display (5 pts)
-- ✅ Image writer in RGB format (5 pts)
-- ✅ Frame drawing (RED, 20px thickness) (5 pts)
-- ✅ Center point drawing (BLUE) with text (5 pts)
-- ✅ Face detection with RED rectangles (10 pts)
+Project 3: MyImageProcessor
+- ✅ Constructor with file validation 
+- ✅ BGR to RGB conversion & display 
+- ✅ BGR to grayscale conversion & display
+- ✅ 50% resize with RGB display
+- ✅ Image writer in RGB format
+- ✅ Frame drawing (RED, 20px thickness) 
+- ✅ Center point drawing (BLUE) with text 
+- ✅ Face detection with RED rectangles 
 
 ---
 
@@ -336,15 +333,3 @@ git push -u origin main
 
 ---
 
-## Total Points: 100 (25 + 35 + 40)
-
-**Target Grade:** VG (90%+)
-
-All projects fully implemented with:
-- Complete functionality for all requirements
-- Proper error handling
-- Clean, documented code
-- Visualization and output capabilities
-- Professional code quality
-
-**Status:** ✅ READY FOR SUBMISSION
